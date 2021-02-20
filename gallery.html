@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="Style/gallery.css">
+    <script src="Script/gallery.js"></script>
+
+
+</head>
+
+<body>
+    <!--this for create Menu in page header -->
+    <header class="headerPage">
+        <div class="headerImage">
+            <div class="headerList">
+                <ul class="List">
+                    <li class="HeaderItem" id="CompanyName">ALHENDAWY RESTAURANT</li>
+                    <li class="HeaderItem"><a class="HeaderLink" href="#">Home</a></li>
+                    <li class="HeaderItem"><a class="HeaderLink" href="#">Contact Us</a></li>
+                    <li class="HeaderItem"><a class="HeaderLink" href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--this for create Gallery product-->
+    <section id="ViewAll">
+        <!--this Templet will created uesd Java Script so Gallery_Design just structure help me to know the steps that i will do -->
+        <!--<div class="Gallery_Design">
+            <div class="Gallery_Button">
+                <button class="viewbutton" value="button0">GET ORDER</button>
+            </div>
+            <span class="Gallery_Describe">chicken</span>
+        </div>-->
+    </section>
+
+
+    <!--this for open window when clicked on button GETORDER-->
+    <section class="SendOrderSection" id="SendOrdermodel">
+        <div class="SendOrderPage">
+            <header class="SendOrderPageHeader">
+                <span id="close">&times;</span>
+                <h2 id="Company">ALHENDAWY RESTURENT</h2>
+            </header>
+            <div id="containertable">
+                <table id="tableStructurepage">
+                    <tr>
+                        <td rowspan="5" class="SendOrderPageImage" id="OrderImage">
+                            <div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="SendOrderPagesalary" id="Ordersalary" colspan="2">Salary</td>
+                    </tr>
+                    <tr>
+                        <td class="SendOrderPageDesc" id="OrderDesc" colspan="2">Description</td>
+                    </tr>
+                    <tr>
+                        <td><label class="SendOrderPageCouLabel">Count</label></td>
+                        <td><input class="SendOrderPageCounText" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center"><input id="SendOrderPageChoiseLoc" type="button" value="Choise Location"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="center"><input id="SendOrderPage_buy" type="button" value="BUY"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
