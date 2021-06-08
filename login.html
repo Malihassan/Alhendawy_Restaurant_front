@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="Style/forms.css">
+    <script type="module" src="Script/login.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-logo">
+        logo
+    </div>
+    <ul class="nav-list">
+        <li class="nav-item"> <a href="about.html"> About </a></li>
+        <li class="nav-item"> <a href="contactus.html"> Contact us </a></li>
+        <li class="nav-item "> <a href="register.html"> Register </a></li>
+        <li class="nav-item"> <a href="login.html"> Login </a></li>
+    </ul>
+    <div class="clr"></div>
+</nav>
+
+
+
+    <div class="login">
+    <form id="login-form">
+        <label for="Email">Email </label>
+        <input id="email" type="text" placeholder="Enter Email" value="" />
+        <br>
+        <label for="userpw">Password </label>
+        <input id="password" type="password" placeholder="Enter Password" value=""  required/>
+        <br>
+        <h5 id =warning_login></h5>
+        <br>
+        <div id="logbtns">
+            <input id="login_btn" class="btn" type="submit" value="Login" required/>
+            <input id="Register_btn" class="btn" type="button" value="Register Account"  onClick="Register()" />
+        </div>
+        <br>
+        <input type="checkbox" id="remembercheckbox" name="remember">
+        <label for="remember"> Remember me  </label>
+        <br>
+        <br>
+        <a id="ForgotLink" href="VerifyAccount.html">Forgot Your Password ?</a>
+    </form>
+    </div>
+</body>
+</html>

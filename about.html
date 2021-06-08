@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*{
+  box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 1.5rem;
+  
+  }
+.card:hover{
+    box-shadow: #9bd8eb 2px 2px 20px;
+  }
+  img{
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+  }
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+.title {
+  color: grey;
+}
+#nokta{
+    font: 20px Arial, sans-serif;}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width:850px) {
+  .column {
+    width: 100%;
+    display: block;
+  } 
+}
+</style>
+    
+         <!--this for header-->
+        <link rel="stylesheet" href="Style/gallery.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+        <!--this for create Menu in page header -->
+    <header class="headerPage">
+        <div class="headerImage">
+            <div class="headerList">
+                <ul class="List">
+                    <li class="HeaderItem" id="CompanyName">ALHENDAWY RESTAURANT</li>
+                    <li class="HeaderItem">
+                        <a class="HeaderLink" href="RestaurantPlan.html">Home</a></li>
+                    <li class="HeaderItem"><a class="HeaderLink" href="gallery.html">Galley</a></li>
+                    <li class="HeaderItem"><a class="HeaderLink" href="contactus.html">Contact Us</a></li>
+                    <li class="HeaderItem"><a class="HeaderLink" href="about.html">About</a></li>
+                    <li class="HeaderItem">
+                        <i style="font-size:24px" class="fa">&#xf07a;</i>
+                        <a class="HeaderLink" href="cart.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+<div class="about-section">
+  <h1>About Us </h1>
+  <h3>We Are Old Friends who love The Food And Eating More Than Our Families, So We Decided To Investigate Our Money In A Resturant </h3>
+  <p id="nokta"> بيقولك مرة مهندس برمجة مراته قالتله هات ازازتين لبن ولو لقيت بيض هات ستة <br> راح ورجع جابلها ست ازايز لبن <br> قالتله انت ليه جبت ست ازايز لبن؟  <br> قالها عشان لقيت بيض هههه</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="Images/amr.jpg" alt="Amr's Picture" style="width:100%">
+      <div class="container">
+        <h2>Amr Gomaa</h2>
+        <p class="title">CEO & Founder</p>
+        <p>I'm an ITI Graduated student of IOT track.</p>
+        <p style="word-break: break-all;">gem3a.ag@gmail.com</p>
+        <p><button class="button" onclick="window.location.href='mailto:gem3a.ag@gmail.com';">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Images/amir.jpg" alt="Amir's Picture" style="width:100%">
+      <div class="container">
+        <h2>Mohamed El-amir</h2>
+        <p class="title">Resturant Manager</p>
+        <p>I'm an ITI Graduated student of IOT track.</p>
+        <p style="word-break: break-all;">Mohamed.elamir3@hotmail.com</p>
+        <p><button  class="button" onclick="window.location.href='mailto:Mohamed.elamir3@hotmail.com';">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="Images/momen.jpg" alt="Mo2men's Picture" style="width:100%">
+      <div class="container">
+        <h2>Momen Zakaria</h2>
+        <p class="title">HR Manager</p>
+        <p>I'm an ITI Graduated student of IOT track.</p>
+        <p style="word-break: break-all;">momenalhendawy@gmail.com</p>
+        <p><button class="button" onclick="window.location.href='mailto:momenalhendawy@gmail.com';">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="Images/Elahl.jpg" alt="El-ahl's Picture" style="width:100%">
+      <div class="container">
+        <h2>Mohamed El-ahl</h2>
+        <p class="title">Financial Manager</p>
+        <p>I'm an ITI Graduated student of IOT track.</p>
+        <p style="word-break: break-all;">mohamed.elahl@hotmail.com</p>
+        <p><button class="button" onclick="window.location.href='mailto:mohamed.elahl@hotmail.com';">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

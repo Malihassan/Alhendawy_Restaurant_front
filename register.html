@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register form</title>
+        <link rel="stylesheet" href="Style/forms.css">
+        <script src="Script/signup.js" ></script>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-logo">
+                logo
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"> <a href="gallery.html"> Menu </a></li>
+                <li class="nav-item"> <a href="contactus.html"> Contact us </a></li>
+                <li class="nav-item "> <a href="register.html"> Register </a></li>
+                <li class="nav-item"> <a href="login.html"> Login </a></li>
+            </ul>
+            <div class="clr"></div>
+        </nav>
+        <div class="container">
+            <div class="register-left">
+                <h1>Join Us</h1>
+            </div>
+            <!-- onsubmit="return store()" -->
+            <!-- action="http://localhost:7000/ElhendawyRestaurant/addNewAcount" -->
+        <form id="signup_form" class="register-right" > 
+        
+            <h2>Register Here</h2>
+            
+            <h3 id="warning_message"> this Account Already Exist </h3>
+
+            <div class="register-form"></div>
+            <label for="name1">Name:</label>
+            <br>
+            <input id="name1" type="text" name="Name" required />
+            <br>
+            <label for="pw">Password:</label>
+            <br>
+            <input id="pw" type="password" minlength="6" name="Password" required />
+            <br>
+            <label for="email">Email:</label>
+            <br>
+            <input id="email" type="email" name="Email" required>
+            <br>
+            <label for="ph">Phone Number:</label>
+            <br>
+            <input id="phone" type="text" name="Phone" pattern="^01[0125][0-9]{8}$" title="Phone Number Not Valid" required> 
+            <br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>            
+            <br>
+            I agree to the terms and conditions
+            <input type="checkbox" required>
+            <br>
+            <input id="rgstr_btn" type="submit" class="btn" value="submit" />
+        </form>
+    </div>
+    
+    </body>
+</html>
