@@ -18,7 +18,7 @@ body {
 }
 .login {
     /* width: 30%; */
-    height: 50%;
+    height: 55%;
     background-color: rgb(86, 98, 120, 0.7);
     border-top-left-radius: 10% 50%;
     border-bottom-left-radius: 10% 50%;
@@ -93,13 +93,14 @@ body {
    height: 80vh;
 }
 .signup-div{
-    height: 62%;
+    height: 60%;
     background-color: rgb(86, 98, 120, 0.7);
     border-top-left-radius: 10% 50%;
     border-bottom-left-radius: 10% 50%;
     margin-left: 5%;
     margin-right: 5%;
 }
+
 
 .gander{
     font-weight: 700;
