@@ -1,127 +1,175 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="Style/gallery.css">    
-    <link href="Style/galleryPortrait.css" rel="stylesheet" media="(orientation:portrait)"/>
-    <link rel="stylesheet" href="Style/styleindex.css">
-    
-    
-    <script type="module" src="Script/gallery.js"></script>
+
+    <title> Gallery </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="stylesheet" href="Style/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="Script/resrvedform.js"></script>
+    <script type="module" src="Script/gallery.js"></script>
+
 </head>
 
 <body>
-    <!--this for create Menu in page header 
-    <header class="headerPage">
-        <div class="headerImage">
-            <div class="headerList">
-                <ul class="List">
-                    <li class="HeaderItem" id="CompanyName">ALHENDAWY RESTAURANT</li>
-                    <li class="HeaderItem">
-                        <a class="HeaderLink" href="RestaurantPlan.html">Home</a></li>
-                    <li class="HeaderItem"><a class="HeaderLink" href="gallery.html">Galley</a></li>
-                    <li class="HeaderItem"><a class="HeaderLink" href="contactus.html">Contact Us</a></li>
-                    <li class="HeaderItem"><a class="HeaderLink" href="about.html">About</a></li>
-                    <li class="HeaderItem">
-                        <i style="font-size:24px" class="fa">&#xf07a;</i>
-                        <a class="HeaderLink" href="cart.html">Shopping Cart</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>-->
-    
-     <!-- Header -->
-      <header class="head">
-          <!-- Navbar -->
-        <nav class="navbar">
-            <div class="nav-logo">
-                logo
-            </div>
-            <ul class="nav-list">
-                <li class="nav-item"> <a href="gallery.html"> Menu </a></li>
-                <li class="nav-item"> <a href="contactus.html"> Contact us </a></li>
-                <li class="nav-item"> <a href="login.html"> Logout </a></li>
-                <i class="fa" style='font-size:24px;color:#f9bd4f'> &#xf07a; </i>
-                <li class="nav-item"> <a href="cart.html"> Shopping Cart </a></li>
-            </ul>
-            <div class="clr"></div>
-        </nav>
-        <!-- Home img & paragraph -->
-        <div class="bg-header">
-            <div class="bg-overlay">
-                <div class="bg-data">
-                    <h1>Our special plates</h1>
+    <!-- Header -->
+    <div class="container-fluid">
+        <header class="header-bg  border">
+            <nav class="nav row navbar-light ">
+                <a class="logo col-xl-4 col-lg-4 col-md-3 col-sm-6 col-6 ">
+                    <pre>Elhendawy.</pre>
+                </a>
+                <div class=" col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 row align-items-center justify-content-center "
+                    href="">
+                    <input id="booktable" type="button" value="BOOK TABLE">
                 </div>
-            </div>         
-        </div>
-      </header>
-    
-    <!--this for create Gallery product-->
-    <section id="ViewAll">
-        <!--this Templet will created uesd Java Script so Gallery_Design just structure help me to know the steps that i will do -->
-        <!--<div class="Gallery_Design">
-            <div class="Gallery_Button">
-                <button class="viewbutton" value="button0">GET ORDER</button>
+                <ul
+                    class="list list-inline col-xl-5 col-lg-5 col-md-6 col-sm-12 d-flex flex-row align-items-center justify-content-center">
+
+                    <li class="list_items list-inline-item col-sm-3 "><a href="contactus.html">CONTACT</a></li>
+                    <li class="list_items list-inline-item col-sm-3 "><a id="logout" href="login.html">LOGOUT</a></li>
+                    <li class="list_items list-inline-item col-sm-3 "><a href="cart.html">CART</a>
+                        <i class="fa" style='font-size:16px;color:#f9bd4f'> &#xf07a;</i>
+                    </li>
+
+                </ul>
+
+            </nav>
+            <div class="bg-overlay row align-items-center justify-content-center">
+                <pre class="header-data ">
+                        <h3> Enjoy fresh and Delicious food </h3>
+                        <h5 class="border">E L H E N D A W Y    R E S T A U R A N T</h5>
+                </pre>
             </div>
-            <span class="Gallery_Describe">chicken</span>
-        </div>-->
-    </section>
+        </header>
 
 
+        <!--this for create Gallery product-->
+        <section id="ViewAll" class="row col-xl-12 align-items-center justify-content-center">
+            <!--this Templet will created uesd Java Script so Gallery_Design just structure help me to know the steps that i will do -->
+            <!-- <div class="Gallery_Design row col-xl-2  col-lg-2 col-md-3 col-sm-4 col-9">
+                <div class="Gallery_Button">
+                    <button class="viewbutton" value="button0">GET ORDER</button>
+                </div>
+                <span class="Gallery_Describe">chicken</span>
+            </div> -->
+        </section>
 
-    <!--this for open window when clicked on button GET ORDER-->
 
-    <section class="SendOrderSection" id="SendOrdermodel">
-        <div class="SendOrderPage">
-            <header class="SendOrderPageHeader">
-                <span id="close">&times;</span>
-            </header>
-            <div id="containertable">
-                <table id="tableStructurepage">
-                    <tr>
-                        <td rowspan="5" class="SendOrderPageImage" id="OrderImage">
-                            <!-- ti insert in it image -->
-                            <div></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <!-- <td class="SendOrderPageLabel" id="OrderDesclable" ></td> -->
-                        <td class="SendOrderPageDescText" id="OrderDesc" colspan="3" ></td>
-                    </tr>
-                    <tr>
+        <!--this for open window when clicked on button GET ORDER-->
+
+        <section class="SendOrderSection" id="SendOrdermodel">
+            <div class="container-oder-form row align-items-center justify-content-center">
+                <div class="SendOrderPage row ">
+                    <header class="SendOrderPageHeader col-xl-12">
+                        <span class="" id="close">&times;</span>
+                    </header>
+
+                    <div class=" row col-xl-12 justify-content-center align-items-center" id="container">
+                        <div class="SendOrderPageImage  col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" id="OrderImage">
+                        </div>
+                        <div class="OrderData border col-xl-6 col-lg-6 col-md-6 col-sm-6 col-5 d-flex flex-column">
+
+                            <span class="order-name row justify-content-center align-items-center "
+                                id="OrderName"></span>
+
+                            <span class="order-Desc " id="OrderDesc"></span>
+
+                            <div class="DivCounter   d-flex flex-row">
+
+                                <div class=" row col-xl-6 talign-items-cener justify-content-center">
+                                    <input class="counter" id="increment" type="button" value="+">
+
+                                    <label for="count" class="Countlabel" id="OrderCount"></label>
+
+                                    <input class="counter" id="decrement" type="button" value="-">
+                                </div>
+                                <div class="row col-xl-6 align-items-center justify-content-center">
+                                    <span class="PriceText" id="OrderPrice"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-12 row align-items-center justify-content-center">
+                        <input id="SendOrderPage_buy" type="button" value="ADD TO CART">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-footer ">
+            <p class="row align-items-center justify-content-center"> Copyright <span class="span-word"> &copy; </span>
+                Elhendawy Resturant 2021-2022 </p>
+        </footer>
+
+    </div>
+
+
+    <!-- BOOK TABLE  -->
+    <section class="bookTableSection" id="bookTableModel">
+        <div class="container-bookTable-form row align-items-center justify-content-center">
+            <div class="bookTablePage row col-xl-5 col-lg-7 col-md-7 col-sm-8 col-10">
+                <header class="bookTablePageHeader col-xl-12">
+                    <span  id="closeReservedPage">&times;</span>
+                </header>
+                <div class="bookTableContainer row col-xl-12">
+                    <label class="booktableformtitle row align-items-center justify-content-center col-xl-12">Reservation Table</label>
+                    <form id="book_form" class="bookform row col-xl-12 d-flex justify-content-center ">
                         
-                        <td><input class="SendOrderPageCountText" id="OrderCount" type="number" min="1" max="9" title="Count from 1 to 9" required ></td>
-                        <td><label class="SendOrderPageLabel" id="OrderCountlabel">  </label></td>
-                        <td class="SendOrderPagePriceText" id="OrderPrice"></td>
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="name" placeholder="Name" required />
 
-                    </tr>
-                    <!-- <tr>
-                        <td colspan="3" align ="center"><input id="SendOrderPageChoiseLoc" type="button" value="Choise Location"></td>
-                    </tr> -->
-                    <tr></tr>
-                    <tr></tr>
-                    <tr>
-                        <td colspan="4" align ="center"><input id="SendOrderPage_buy" type="button" value="ADD TO CART"></td>
-                    </tr>
-                </table>
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="email" id="bookemail" placeholder="Email" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="phone-number" placeholder="Phone Number" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="numPeople" placeholder="Number Of People" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="date" id="date" placeholder="Date" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="time" id="time" placeholder="Time" required />
+
+                        <textarea class="booktext col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10" 
+                        id="special-request" placeholder="Specail Request" required ></textarea>
+
+                        <input id="bookTable_btn" type="submit" value="Book">
+                    </form>
+                    <label id="successMessage" class=" row align-items-center justify-content-center col-xl-12"></label>
+                    
+                </div>
             </div>
         </div>
     </section>
 
 
-
-    <!--this for open Location  in SendOrderPage-->
-    <section id="mapPage">
-        <div id="mapContainer">
-            <h3>Choise Your Location</h3>
-            <div id="map"></div>
-            <input type="button" id="CancelMapPage" value="Done">
-        </div>
-    </section>
-    <footer class="footer">
-        <p> Copyright <span class="span-word"> &copy; </span> ITI IOT TRACK 2021-2022 </p>
-    </footer>
 </body>
 
 </html>

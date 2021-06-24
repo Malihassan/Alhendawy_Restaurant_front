@@ -2,29 +2,39 @@
 <html lang="en">
 
 <head>
+    <title>Login form</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login form</title>
     <link rel="stylesheet" href="Style/forms.css">
-    <script  src="Script/verifyAccount.js"></script>
+    <script src="Script/verifyAccount.js"></script>
 </head>
 
 <body>
-    <div class="login">
-        <h4 id ="warningCofirmationMessage" > User was registered successfully! Please check your Email </h4>
-        <form id="verfiy_form">
-            <label for="userEmail">Email </label>
-            <input id="confirmationEmail" type="email" required />
-            <br>
-            <br>
-            <label for="Confirmation">Confirmation Code </label><br>
-            <input id="confirmationCode" type="text" pattern="[0-9]{5}" title="Confirmation Code Not Valid" required />
-            <br>
-            <div id="logbtns">
-            <input id="verfiy_btn" class="btn" type="submit" value="verfiy" required />
+    <div class="container-fluid">
+        <div class="continer-verify-form row align-items-center justify-content-center ">
+            <div class="verify-div col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8 d-flex flex-column row align-items-center justify-content-center">
+                <h5 id="warningCofirmationMessage"> Please Check Your Email .. For Verfiy Code</h5>
+                <form id="verfiy_form" class="d-flex flex-column">
+                    <input class="inputStyle" id="confirmationEmail" type="email" placeholder="Email" required />
+                    <input class="inputStyle" id="confirmationCode" type="text" placeholder="Conformation Code" pattern="[0-9]{5}" title="Confirmation Code Not Valid" required />
+                    <input id="verfiy_btn" class="btn" type="submit" value="verfiy" required />
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </body>
 

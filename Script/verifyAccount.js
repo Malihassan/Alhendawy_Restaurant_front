@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
             Email: email,
             ConfirmationCode: code
         }
-        let response = await fetch("http://localhost:7000/ElhendawyRestaurant/activateAccount", {
+        let response = await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/activateAccount", {
             // credentials: "include"   , 
             method: "POST",
             headers: {

@@ -1,49 +1,62 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="Style/styles.css" />
-    <script type="module" src="Script/cart.js" async></script>
+    <title> Cart </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--this for header-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Style/Extended CSS.css">
+    <link rel="stylesheet" href="Style/index.css">
+    <link rel="stylesheet" href="Style/styles.css" />
 
-    <link rel="stylesheet" href="Style/gallery.css">
+
     <script
         src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB90FxtYG_ybAYXGkz0ybkmkboE2nEbezI"></script>
-
-    <title> the best cart in the world !</title>
-
+    <script type="module" src="Script/cart.js" async></script>
+    <script src="Script/resrvedform.js" async></script>
 
 </head>
 
 <body>
-    <div>
-        <!--this for create Menu in page header -->
-        <header class="head">
-            <!-- Navbar -->
-            <nav class="navbar">
-                <div class="nav-logo">
-                    Elhendawey
+    <div class="container-fluid">
+        <header class="header-bg  border">
+            <nav class="nav row navbar-light ">
+                <a class="logo col-xl-4 col-lg-4 col-md-3 col-sm-6 col-6 ">
+                    <pre>Elhendawy.</pre>
+                </a>
+                <div class=" col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 row align-items-center justify-content-center "
+                    href="">
+                    <input id="booktable" type="button" value="BOOK TABLE">
                 </div>
-                <ul class="nav-list">
-                    <li class="nav-item"> <a href="gallery.html"> Menu </a></li>
-                    <li class="nav-item"> <a href="contactus.html"> Contact us </a></li>
-                    <li class="nav-item"> <a href="login.html"> Logout </a></li>
-                    <i class="fa" style='font-size:24px;color:#f9bd4f'> &#xf07a; </i>
-                    <li class="nav-item"> <a href="cart.html"> Shopping Cart </a></li>
+                <ul class="list list-inline col-xl-5 col-lg-5 col-md-6 col-sm-12 d-flex flex-row align-items-center justify-content-center">
+                    <li class="list_items list-inline-item col-sm-3 "><a href="gallery.html">MENU</a></li>
+                    <li class="list_items list-inline-item col-sm-3 "><a id="logout" href="login.html">LOGOUT</a></li>
+                    <li class="list_items list-inline-item col-sm-3 "><a href="cart.html">CART</a>
+                        <i class="fa" style='font-size:16px;color:#f9bd4f'> &#xf07a;</i>
+                    </li>
+
                 </ul>
-                <div class="clr"></div>
+
             </nav>
-            <!-- Home img & paragraph -->
-            <div class="bg-header">
-                <div class="bg-overlay">
-                    <div class="bg-data">
-                        <h1 style="color: ivory;">Here Is your cart ^-^</h1>
-                    </div>
-                </div>
+            <div class="bg-overlay row align-items-center justify-content-center">
             </div>
         </header>
+
 
         <section class="container content-section">
             <h2 class="section-header">CART</h2>
@@ -68,21 +81,67 @@
         </section>
 
 
-        
 
-         <!--this for open pop window when clicked BUY-->
 
-            <section id="mapPage">
+        <!--this for open pop window when clicked BUY-->
+
+        <section id="mapPage">
+            <div  class="container-map-form row align-items-center justify-content-center">
                 <div id="mapContainer">
-                    <h2>Choise Your Location</h2>
+                    <h3>Choise Your Location</h3>
                     <div id="map"></div>
                     <input type="button" id="CancelMapPage" value="Done">
                 </div>
-            </section>
-        <footer class="footer">
-            <p> Copyright <span class="span-word"> &copy; </span> ITI IOT TRACK 2021-2022 </p>
+            </div>
+        </section>
+
+        <footer class="bg-footer row align-items-center justify-content-center">
+            <p class="row align-items-center justify-content-center"> Copyright <span class="span-word"> &copy; </span>
+                Elhendawy Resturant 2021-2022 </p>
         </footer>
     </div>
+
+    <!-- BOOK TABLE  -->
+    <section class="bookTableSection" id="bookTableModel">
+        <div class="container-bookTable-form row align-items-center justify-content-center">
+            <div class="bookTablePage row col-xl-5 col-lg-7 col-md-7 col-sm-8 col-10">
+                <header class="bookTablePageHeader col-xl-12">
+                    <span  id="closeReservedPage">&times;</span>
+                </header>
+                <div class="bookTableContainer row col-xl-12">
+                    <label class="booktableformtitle row align-items-center justify-content-center col-xl-12">Reservation Table</label>
+                    <form id="book_form" class="bookform row col-xl-12 d-flex justify-content-center ">
+                        
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="name" placeholder="Name" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="email" id="bookemail" placeholder="Email" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="phone-number" placeholder="Phone Number" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="numPeople" placeholder="Number Of People" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="date" id="date" placeholder="Date" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="time" id="time" placeholder="Time" required />
+
+                        <textarea class="booktext col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10" 
+                        id="special-request" placeholder="Specail Request" required ></textarea>
+
+                        <input id="bookTable_btn" type="submit" value="Book">
+                    </form>
+                    <label id="successMessage" class=" row align-items-center justify-content-center col-xl-12"></label>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>

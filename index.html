@@ -1,121 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Style/styleindex.css">
-    <title>Home Page</title>
-  </head>
-  <body>
-      <!-- Container -->
-    <div class="container">
-        <!-- Header -->
-      <header class="head">
-          <!-- Navbar -->
-        <nav class="navbar">
-            <div class="nav-logo">
-                logo
-            </div>
-            <ul class="nav-list">
-                <li class="nav-item"> <a href="gallery.html"> Menu </a></li>
-                <li class="nav-item"> <a href="contactus.html"> Contact us </a></li>
-                <li class="nav-item "> <a href="register.html"> Register </a></li>
-                <li class="nav-item"> <a href="login.html"> Login </a></li>
-            </ul>
-            <div class="clr"></div>
-        </nav>
-        <!-- Home img & paragraph -->
-        <div class="bg-header">
-            <div class="bg-overlay">
-                <div class="bg-data">
-                    <h1>Welcome To Elhendawey Resturant</h1>
-                    <h3>اصرف ما في الجيب يأتيك ما في الغيب
-                        <br/> ولو مجاش ملناش دعوة </h3>
-                    <button class="btn" onclick="window.location.href='gallery.html'">Menu</button>
-                    <button class="btn more" onclick="window.location.href='about.html'"> Learn more</button>
-                </div>
-            </div>
-            
-        </div>
-      </header>
-        <!-- About -->
-        <section class="about">
-            <div class="about-txt">
-                <p>
-                    Our resturant is one of the  <span class="span-word"> funniest </span>resturants<br/>
-                     in the area, We offer very<span class="span-word"> delisious </span> plats <br/>
-                    so you can eat and lough all in one.
-                </p>
-            </div>
-        </section>
-        <!-- Services  -->
-        <section class="services">
-                <div class="title">
-                    <p class="mt-0">What we offer ?</p>
-                    <hr/>
-                </div>
 
-                <div class="flex">
-                     <div class="card">
-                        <i class="magic_card"></i>
-                        <h4 class="card-w">the dumbest offer</h4>
-                        <p>
-                            today's plate, We offer 2 dishes by cost of three oreder now!.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <i class="magic_card"></i>
-                        <h4 class="card-w">the worst offer</h4>
-                        <p>
-                            order two dishes and get 6 dishes and pay for them all.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <i class="magic_card"></i>
-                        <h4 class="card-w">the magnum</h4>
-                        <p>
-                            order family pack and subscribe to the game.
-                        </p>
-                    </div>
+<head>
+    <title> Home </title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style/index.css">
+    <script
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB90FxtYG_ybAYXGkz0ybkmkboE2nEbezI"></script>
+
+    <script type="module" src="./Script/index.js"></script>
+    <script src="Script/resrvedform.js"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="header-bg  border">
+            <nav class="nav row navbar-light ">
+                <a class="logo col-xl-4 col-lg-4 col-md-3 col-sm-6 col-6 ">
+                    <pre>Elhendawy.</pre>
+                </a>
+                <div class=" col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 row align-items-center justify-content-center "
+                    href="">
+                    <input id="booktable" type="button" value="BOOK TABLE">
                 </div>
-                <div class="flex">
-                    <div class="card">
-                       <i class="magic_card"></i>
-                       <h4 class="card-w">the gaint offer</h4>
-                       <p>
-                           bring your family and eat with them in the family day.
-                       </p>
-                   </div>
-                   <div class="card">
-                       <i class="magic_card"></i>
-                       <h4 class="card-w">unexisted offer</h4>
-                       <p>
-                           order nothing , and get nothing then pay for it.
-                       </p>
-                   </div>
-                   <div class="card">
-                       <i class="magic_card"></i>
-                       <h4 class="card-w">the last offer</h4>
-                       <p>
-                           this is the last offer.
-                       </p>
-                   </div>
-               </div>
+                <ul
+                    class="list list-inline col-xl-5 col-lg-5 col-md-6 col-sm-12 d-flex flex-row align-items-center justify-content-center">
+                    <li class="list_items list-inline-item col-sm-2 "><a href="index.html">HOME</a></li>
+                    <li class="list_items list-inline-item col-sm-2 "><a href="contactus.html">CONTACT</a></li>
+                    <li class="list_items list-inline-item col-sm-2 "><a href="register.html">SIGNUP</a></li>
+                    <li class="list_items list-inline-item col-sm-2 "><a href="login.html">LOGIN</a></li>
+                </ul>
+
+            </nav>
+            <div class="bg-overlay row align-items-center justify-content-center">
+                <pre class="header-data ">
+                        <h3> Enjoy fresh and Delicious food </h3>
+                        <h5 class="border">E L H E N D A W Y    R E S T A U R A N T</h5>
+                </pre>
+            </div>
+        </header>
+
+        <section class="about row col-xl-12 align-items-center justify-content-center">
+            <p>
+                <b>Elhendawey Resturant Since 1997</b><br>
+                Our resturant is one of the funniest resturants<br />
+                in the area, We offer very delisious plats <br />
+                so you can eat and lough all in one.
+            </p>
         </section>
-        <!-- Location -->
-        <section class="location">
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13825.08745367773!2d30.935366675964346!3d29.971616028423036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145857a2c2025131%3A0x715549a142d305fb!2sStomach!5e0!3m2!1sen!2seg!4v1613942296887!5m2!1sen!2seg" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <p>Location to our <span class="span-word">Resturant</span></p>
+
+        <section class="offersection container ">
+            <div class=" title row col-xl-12  align-items-center justify-content-center">
+                <h4>What We Offer ?</h4>
+            </div>
+            <div id="offercarts" class="offercarts row col-xl-12 align-items-center justify-content-center">
+                <!-- <div class="cart col-xl-3 col-lg-3 col-md-5">
+                    <img class="Offer_Image col border" src="./Images/GRT-meal-prep-chicken-bean-732x549-thumb.jpg">
+                    <h5 class="Offery_Name col"> unexisted offer</h5>
+                    <h6 class="Offer_Price col">30$</h6>
+                    <p class="Offery_Describe col"> order two dishes and get 6 dishes and pay for them all.</p>
+                </div> -->
+
+            </div>
         </section>
-        <!-- Footer -->
-        <footer class="footer">
-            <p> Copyright <span class="span-word"> &copy; </span> ITI IOT TRACK 2021-2022 </p>
-        </footer>
+
+        <section class="location row ">
+            <div id="map-container-google-3" class="z-depth-1-half map-container-3 col-xl-12">
+                <iframe class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13825.08745367773!2d30.935366675964346!3d29.971616028423036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145857a2c2025131%3A0x715549a142d305fb!2sStomach!5e0!3m2!1sen!2seg!4v1613942296887!5m2!1sen!2seg"
+                    height="500" allowfullscreen="" loading="lazy"></iframe>
+                <p>Location to our <span style="color:#f9bd4f ;">Resturant</span></p>
+            </div>
+        </section>
+
     </div>
-    <script src="https://kit.fontawesome.com/da9dec77a2.js" crossorigin="anonymous"></script>
-  </body>
+
+    <!-- BOOK TABLE  -->
+    <section class="bookTableSection" id="bookTableModel">
+        <div class="container-bookTable-form row align-items-center justify-content-center">
+            <div class="bookTablePage row col-xl-5 col-lg-7 col-md-7 col-sm-8 col-10">
+                <header class="bookTablePageHeader col-xl-12">
+                    <span  id="closeReservedPage">&times;</span>
+                </header>
+                <div class="bookTableContainer row col-xl-12">
+                    <label class="booktableformtitle row align-items-center justify-content-center col-xl-12">Reservation Table</label>
+                    <form id="book_form" class="bookform row col-xl-12 d-flex justify-content-center ">
+                        
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="name" placeholder="Name" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="email" id="bookemail" placeholder="Email" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="phone-number" placeholder="Phone Number" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="numPeople" placeholder="Number Of People" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="date" id="date" placeholder="Date" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="time" id="time" placeholder="Time" required />
+
+                        <textarea class="booktext col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10" 
+                        id="special-request" placeholder="Specail Request" required ></textarea>
+
+                        <input id="bookTable_btn" type="submit" value="Book">
+                    </form>
+                    <label id="successMessage" class=" row align-items-center justify-content-center col-xl-12"></label>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-footer  align-items-center justify-content-center">
+        <p class="row align-items-center justify-content-center"> Copyright <span class="span-word"> &copy;
+            </span> Elhendawy Resturant 2021-2022 </p>
+    </footer>
+</body>
+
 </html>

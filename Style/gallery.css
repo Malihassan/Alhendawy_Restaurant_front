@@ -1,394 +1,234 @@
-  * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      user-select: none;
-  }
-  #ViewAll {
-      display: flex;
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
 
-  .Gallery_Design {
-      width: 20vw;
-      height: 50vh;
-      background-position: center;
-      background-size: cover;
-      margin-left: 25px;
-      margin-right: 30px;
-      margin-bottom: 51px;
-      margin-top: 3px;
-      box-shadow: 0 50px 23px 15px rgba(0, 0, 0, 0.2);
-      border-radius: 10%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-  }
+.container-fluid {
+    background-color: rgba(0, 0, 0, 0.09);
+}
 
-  .Gallery_Design span {
-      font-family: cursive;
-      font-size: 0.8rem;
-      position: absolute;
-      top: 100%;
-      left: 0;
+.header-bg {
+    height: 400px;
+}
 
-  }
+.bg-overlay {
+    height: 370px;
+}
+.list {
+    margin: 5px 0px 0px 0px;
+}
 
+.Gallery_Design {
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    margin: 30px 30px 60px 30px;
+    box-shadow: 0 50px 25px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
-  .Gallery_Design:hover .viewbutton {
-      transform: translateY(0%);
-      transition: all 0.3s ease-in-out;
-      background: white;
-      color: black;
-      opacity: 0.8;
-      transform: scale(1.05);
-
-  }
-
-  .Gallery_Design:hover {
-      opacity: 0.7;
-      box-shadow: 0 50px 23px 15px rgba(0, 0, 0, 0.6);
-  }
-
-  .viewbutton {
-      background: rgba(darken(#F2DAD7, 10%), .9);
-      height: 100%;
-      grid-column: 1 / -1;
-      grid-row: 1 / -1;
-      position: relative;
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      transform: translateY(101%);
-      transition: all 0.3s ease-in-out;
-      background: none;
-      outline: none;
-      font-weight: 100;
-      letter-spacing: 2px;
-      border: 1px solid white;
-      color: white;
-      text-transform: uppercase;
-      padding: 10px;
-  }
-
-  button {
-      cursor: pointer;
-  }
-
-
-  /*FROM HERE FORE GALLERY HEADER*/
-
-  @keyframes ChanagHeaderImg {
-
-      0% {
-          background-image: url(../Images/AR1.jpg);
-      }
-
-      20% {
-          background-image: url(../Images/AR2.jpeg);
-      }
-
-      50% {
-          background-image: url(../Images/AR3.jpg);
-      }
-
-      75% {
-          background-image: url(../Images/AR4.jpg);
-      }
-
-      100% {
-          background-image: url(../Images/AR5t.jpg);
-      }
-  }
-
-  .headerPage {
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  .headerImage {
-      width: 93vw;
-      height: 70vh;
-      background-position: center;
-      background-size: cover;
-      /*animation: ChanagHeaderImg;
-      animation-duration: 13s;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;*/
-      border-radius: 2%;
-  }
-
-  .headerList {
-      width: 95%;
-      height: 15%;
-      color: white;
-      margin-top: 50px;
-      margin-left: 2.5%;
-
-  }
-
-
-
-  .List {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-around;
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 2px solid white;
-  }
-
-  .HeaderItem {
-      height: 80%;
-      margin-top: 8px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      /* border: 2px solid white; */
-      font-size: 1rem;
-      cursor: pointer;
-  }
-
-  .HeaderLink {
-      text-decoration: none;
-      color: white;
-  }
-
-  .HeaderLink:hover {
-      color: #f9bd4f;
-      border-bottom: 1px solid #f9bd4f;
-  }
-
-  #CompanyName {
-      width: 40%;
-      text-align: left;
-      font-family: cursive;
-      font-size: 2rem;
-      border: 2px solid white;
-  }
-
-
-  /*This For Send Orde Page*/
-  .SendOrderSection {
-      width: 100vw;
-      height: 100vh;
-      display: none;
-      position: fixed;
-      z-index: 1;
-      padding-top: 7%;
-      /*      Location of the box */
-      padding-left: 25%;
-      left: 0;
-      top: 0;
-      background-color: rgba(0, 0, 0, 0.8);
-     
-  }
-
-  .SendOrderPage {
-        background-color: rgb(86, 98, 120,0.7);
-      margin: 0;
-      box-shadow: 0 50px 23px 15px rgba(0, 0, 0, 0.5);
-      position: relative;
-      width: 35vw;
-      height: 65vh;
-      animation-name: animatetop;
-      animation-duration: 1s;
-      border-radius: 20%;
-
-  }
-
-  @keyframes animatetop {
-      from {
-          top: -300px;
-          opacity: 0
-      }
-
-      to {
-          top: 0;
-          opacity: 1
-      }
-  }
-
-  .SendOrderPageHeader {
-      height: 13%;
-      padding-right: 25px;
-      padding-left: 10px;
-      padding-top: 5px;
-      color: #f1f3f4;
-      display: flex; 
-      justify-content: flex-end;
-  }
-  /* The Close Button */
-  #close {
-       
-      font-size: 2rem;
-      font-weight: bold;
-      
-  }
-
-  #close:hover,
-  #close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-  }
-
-  #containertable {
-      width: 100%;
-      height: 75%;
-  }
-
-  #tableStructurepage {
-      width: 100%;
-      height: 100%;
-      padding: 10px;
-  }
-
-  .SendOrderPageImage {
-      height: 100%;
-      width: 40%;
-      background-image: url(../Images/AR1.jpg);
-      background-position: center;
-      background-size: cover;
-      border-radius: 10%;
-  }
-
-  .SendOrderPageLabel {
-      height: 35%;
-      width: 5%;
-      font-size: 0.8em;
-      text-align: left;
-      padding-left: 5px;
-  }
-
-  .SendOrderPageDescText{
-    height: 40%;
+.Gallery_Design span {
     font-family: cursive;
     font-size: 0.8rem;
+    margin-top: 5px;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+}
 
-  }
+.Gallery_Design:hover .viewbutton {
+    transform: translateY(0%);
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: black;
+    opacity: 0.8;
+    transform: scale(1.05);
+}
 
-  .SendOrderPagePriceText {
-    height: 34px;
-    width: 70px;
-    border-radius: 5px;
-    border: 1px solid #56CCF2;
-    background-color: #eee;
-    color: #333;
-    /* padding: 0; */
-    text-align: center;
-    font-size: 1.2em;
-    /* margin-right: 25px; */
-  }
+.Gallery_Design:hover {
+    opacity: 0.7;
+    box-shadow: 0 50px 23px 15px rgba(0, 0, 0, 0.6);
+}
 
-  .SendOrderPageCountText {
-    height: 34px;
-    width: 50px;
-    border-radius: 5px;
-    border: 1px solid #56CCF2;
-    background-color: #eee;
-    color: #333;
-    /* padding: 0; */
-    text-align: center;
-    font-size: 1em;
-    /* margin-right: 5px; */
-  }
+.viewbutton {
+    background: rgba(darken(#F2DAD7, 10%), .9);
+    height: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    transform: translateY(101%);
+    transition: all 0.3s ease-in-out;
+    background: none;
+    outline: none;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: 500;
+}
 
-  #SendOrderPageChoiseLoc {
-      border: none;
-      padding-top: 0.75rem;
-      padding-left: 2rem;
-      padding-bottom: 0.75rem;
-      padding-right: 2rem;
-      border-radius: 5px;
-      background: #626485;
-      font-family: cursive;
-  }
+button {
+    cursor: pointer;
+}
 
-  #SendOrderPageChoiseLoc:active {
-      transform: scale(0.95);
-  }
+/*This For Send Orde Page*/
 
-  #SendOrderPage_buy {
-      border: none;
-      width: 20vh;
-      height: 80%;
-      border-radius: 5px;
-    background-color: #f9bd4f;
-      color: #f1f3f4;
-      font-family: cursive;
-      margin-top: 5px;
-    
-  }
-
-  #SendOrderPage_buy:active {
-      background: linear-gradient(#535EDC);
-      position: relative;
-      top: 5px;
-  }
-
-  /*this for UserLocation  in Send order Page*/
-  #mapPage {
+.SendOrderSection {
     width: 100vw;
     height: 100vh;
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 7%;
-    /*      Location of the box */
-    padding-left: 25%;
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.8);
-  }
+}
 
+.container-oder-form {
+    height: 100vh;
+}
 
+.SendOrderPage {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(86, 98, 120, 0.7);
+    box-shadow: 0 50px 23px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: 1s;
+    border-radius: 10%;
+    margin-left: 2%;
+    margin-right:2%;
+}
 
-  #mapContainer {
-      background-color: rgb(86, 98, 120,0.7);
-      margin: 0;
-      box-shadow: 0 50px 23px 15px rgba(0, 0, 0, 0.5);
-      position: relative;
-      width: 40vw;
-      height: 70vh;
-      border: 2px solid black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation-name: animatetop;
-      animation-duration: 1s;
-  }
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
 
-  #map {
-      width: 95%;
-      height: 95%;
-      border: 2px solid black;
+.SendOrderPageHeader {
+    height: 13%;
+    color: #f1f3f4;
+    display: flex;
+    justify-content: flex-end;
+}
 
-  }
+/* The Close Button */
 
-  #CancelMapPage {
-      border: none;
-      padding-top: 0.75rem;
-      padding-left: 2rem;
-      padding-bottom: 0.75rem;
-      padding-right: 2rem;
-      border-radius: 5px;
-      background-color: #f9bd4f;
-      color: #f1f3f4;
-      font-family: cursive;
-      margin: 10px;
+#close {
+    margin-right: 3%;
+    margin-top: 3%;
+    font-size: 2rem;
+    font-weight: bold;
+}
 
-  }
+#close:hover, #close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-  .footer {
-      color: #444444;
-      font-weight: 500;
-      text-align: center;
-      font-size: 1.3em;
-  }
+#container {
+    width: 100%;
+    height: 65%;
+}
+
+.SendOrderPageImage {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    margin-left: 5px;
+    margin-right: 7px;
+    /* margin-right: 3%; */
+}
+
+.OrderData {
+    height: 100%;
+    padding: 0%;
+    margin-right: 5px;
+}
+
+.order-name {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+}
+
+.order-Desc {
+    height: auto;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.DivCounter {
+    margin-top: 15px;
+}
+
+.counter {
+    width: 30%;
+    height: 100%;
+    background-color: #f9bd4f;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10%;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    /* margin-left: 10px; */
+}
+
+.Countlabel {
+    /* background-color: transparent; */
+    width: 30%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.PriceText {
+    width: 70%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #e4b96a;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#SendOrderPage_buy {
+    border: none;
+    border-radius: 5px;
+    background-color: #f9bd4f;
+    color: #f1f3f4;
+    font-family: cursive;
+    height: 70%;
+    width: 40%;
+    margin-bottom: 3%;
+}

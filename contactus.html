@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
+    <title> Contact US</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="Style/contactus.css">
-    <title></title>
-    
-     
-    
-         <!--this for header-->
-        <link rel="stylesheet" href="Style/gallery.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="Script/contactus.js"></script>
+
 </head>
+
 <body>
-  
-        <!--this for create Menu in page header -->
-    <header class="headerPage">
-        <div class="headerImage">
-            <div class="headerList">
-                <ul class="List">
-                    <li class="HeaderItem" id="CompanyName">ALHENDAWY RESTAURANT</li>
-                    <li class="HeaderItem">
-                        <a class="HeaderLink" href="RestaurantPlan.html">Home</a></li>
-                    <li class="HeaderItem"><a class="HeaderLink" href="gallery.html">Galley</a></li>
-                    <li class="HeaderItem"><a class="HeaderLink" href="contactus.html">Contact Us</a></li>
-                    <li class="HeaderItem"><a class="HeaderLink" href="about.html">About</a></li>
-                    <li class="HeaderItem">
-                        <i style="font-size:24px" class="fa">&#xf07a;</i>
-                        <a class="HeaderLink" href="cart.html">Shopping Cart</a></li>
-                </ul>
+    <div class="container-fluid row align-items-center justify-content-center">
+        <div class="container  row col-xl-8 align-items-center justify-content-center">   
+            <div class="left  col-xl-6 col-lg-6 col-md-10 col-sm-10 col-10 ">
+                <p class=" title col-xl-12  ">Get in touch ! </p>
+                <form class="form col-xl-12 d-flex flex-column  align-items-center justify-content-center"
+                    id="email_form">
+                    <input class="mailtext " type="email" id="email"
+                        placeholder="Email.." required />
+
+                    <input class="mailtext " type="text" id="subject"
+                        placeholder="Subject..." required />
+
+                    <textarea class="mailtext " id="message" name="message"
+                        placeholder="message..." required style="height: 7rem;"></textarea>
+
+                    <input class="send_mail " type="submit" value="Send" 
+                    id="sendmail"/>
+
+                </form>
+                <label class=" title col-xl-12 " id="successMessage"></label>
+
             </div>
-        </div>
-    </header>
-  <div class="form_container">
-        <h1 style="font: italic  bold 25px/40px Georgia, Verdana ; color:rgb(51, 93, 207);"> Contact Us </h1><br>
+            <div class="right col-xl-6 col-lg-6 col-md-10 col-sm-10 col-10  ">
+                <div class="rightcontainer d-flex flex-column">
+                    <div class="contact-data">
+                        <p>
+                        <label>Address</label><br>
+                        First 6th of October, Giza<br>
+                        New Assuit , Assuit<br><br>
 
-     <form action="" method="POST" enctype="text/plain" class="form">
-        <label for="name"><p>Name</p></label>
-        <input class="mailtext" type="text" id="username" placeholder="Enter your full name..."/><br><br>
+                        <label>Us</label><br>
+                        1 (02) 567-891<br>
+                        1 (088) 987-654
+                        </p>
+                    </div>
+                    <div class="location row">
+                        <div id="map-container-google-3" class="z-depth-1-half map-container-3 col-xl-12">
+                            <iframe class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13825.08745367773!2d30.935366675964346!3d29.971616028423036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145857a2c2025131%3A0x715549a142d305fb!2sStomach!5e0!3m2!1sen!2seg!4v1613942296887!5m2!1sen!2seg"
+                                allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
 
-        <label for="email"><p>E-mail</p></label>
-        <!-- <input class="mailtext" type="email" id="email" placeholder="Enter your Email.." required/><br><br> -->
-        <input class="mailtext" type="text" id="email" placeholder="Enter your Email.."/><br><br>
+            </div>
 
-
-        <label for="subject"><P>Subject</P></label>
-        <textarea class="mailtext" id="subject" name="subject" placeholder="Enter your message...!" style="height: 10rem;"></textarea><br><br>
-
-        <!-- <input type="submit" value="submit"/> -->
-
-        <a id="anchor" href="">Send</a>
-    </form>
-    <footer class="footer">
-        <p> Copyright <span class="span-word"> &copy; </span> ITI IOT TRACK 2021-2022 </p>
+    </div>
+        
+    </div>
+    <footer class="bg-footer row  align-items-center justify-content-center">
+        <p> Copyright <span class="span-word"> &copy; </span> Elhendawy Resturant 2021-2022 </p>
     </footer>
 
-  </div>
 </body>
-<script src="Script/contactus.js"></script>
 
 </html>

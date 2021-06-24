@@ -1,34 +1,34 @@
-// putting hands on anchor tag to listen
-anchor = document.querySelector('#anchor');
-// adding event listener to anchor
-anchor.addEventListener('click', function (e) {
-    //checking if the user inserted valid username or not
-    if (!isUserNameValid()) {
-        alert("please Enter valid user name");
-        // e.preventDefault();
-    } else if (!isUserEmailValid()) {
-        alert("please Enter valid email");
-        e.preventDefault();
-    } else { sendmail(); }
-}); // end of anchor listening event
+window.addEventListener('load' ,()=>{
+    document.getElementById("email_form").onsubmit = sendMail 
+})
 
-function sendmail() {
-    // Getting the userData from the textboxs 
+
+async function sendMail(obj) {
+    obj.preventDefault();
     userData = document.querySelectorAll(".mailtext");
-    username = userData[0].value;
-    useremail = userData[1].value;
-    subject = userData[2].value;
-    anchor.href = "mailto:admin@gmail.com?subject= " + subject + "&body=This is message from : " + username + "";
-};
-// Validate the username 
-function isUserNameValid() {
-    username = document.getElementById('username');
-    var usernamepattern = /^[a-zA-Z]{2,}\d*$/i;
-    return username.value.match(usernamepattern);
-};
-// validate the Email 
-function isUserEmailValid() {
-    useremail = document.getElementById('email');
-    var useremailpattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-    return useremail.value.match(useremailpattern);
-};
+    useremail = userData[0].value;
+    usersubject = userData[1].value;
+    usermessage = userData[2].value;
+
+    const contactData = {
+        Email   :useremail,
+        Subject :usersubject,
+        Message :usermessage 
+    }
+
+    let response =await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/contactUs",{
+        method :"Post" ,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        credentials: 'same-origin',
+        body: JSON.stringify(contactData)
+    })
+    if (response.status == 200) {
+        document.getElementById("successMessage").textContent = "Thank You For Contact Us ..."
+        var form = document.getElementById("email_form");
+        form.reset();        
+    }
+
+}

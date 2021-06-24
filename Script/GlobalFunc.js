@@ -21,12 +21,9 @@ if (cart == null) {
   cart = [] ;
 } 
  function AddOrder(name,price) {
-  document.getElementById("OrderCount").innerHTML = "";
-  console.log("= = = = >>" + name);
   let AddToCartButton = document.getElementById("SendOrderPage_buy");
-  
   AddToCartButton.onclick = () => {
-    let CountValue = document.getElementById("OrderCount").value;
+    let CountValue = document.getElementById("OrderCount").textContent;
     let Order ={
       ProductName :name ,
       Price :price ,

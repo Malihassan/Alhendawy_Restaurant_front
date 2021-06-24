@@ -2,7 +2,16 @@ import { getCookie } from './GlobalFunc.js'
 //itemquantity=0;
 Location = "";
 var User = localStorage.getItem('UserCart')
+const tokenID =getCookie("RTU")
+let check = checkAuth(tokenID) 
+
 window.addEventListener('load', function () {
+    //LOGOUT in Nav par
+    var logout = document.getElementById("logout");
+    logout.onclick = ()=>{
+        document.cookie = 'RTU=; expires=Thu, 01-Jan-70 00:00:01 GMT;';
+    }
+
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i]
@@ -24,8 +33,25 @@ window.addEventListener('load', function () {
     document.getElementById("userLocation").onclick = () => {
         GetUserLocation()
     }
+
 })
 
+async function checkAuth(token) {
+    let response = await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/checkAuth", {
+        method: "GET",
+        headers: {
+            'token': token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    });
+
+
+    if (response.status == 401) {
+        window.location.replace('./login.html')
+    }
+    
+}
 
 async function purchaseClicked() {
 
@@ -37,7 +63,6 @@ async function purchaseClicked() {
     updateCartTotal()
 
     var cart = JSON.parse(localStorage.getItem('UserCart'))
-    console.log(cart.length );
     if (cart === null || cart.length === 0) {
         alert("YOU NOT HAVE ANYTHING IN YOUR CART")
     } else {
@@ -49,7 +74,7 @@ async function purchaseClicked() {
             Cart: cart
         }
         const tokenID = getCookie("RTU")
-        const response = await fetch("http://localhost:7000/ElhendawyRestaurant/sendOrder", {
+        const response = await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/sendOrder", {
             method: "POST",
             headers: {
                 'token': tokenID,
@@ -315,3 +340,4 @@ function initMap(la, ln) {
         // console.log(Location);
     });
 }
+

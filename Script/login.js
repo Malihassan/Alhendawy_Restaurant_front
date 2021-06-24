@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
             Email: email,
             Password: password
         }
-        let response = await fetch("http://localhost:7000/ElhendawyRestaurant/login", {
+        let response = await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/login", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
             setCoockie(result.tokenID,"RTU")
             window.location.replace('./gallery.html')
         } else if (result.response == " Password Incorrect ") {
-            showWarningMessage(" Password Incorrect ")
+            showWarningMessage(" Incorrect Password ")
         } else if (result.response == " this account not active ") {
             showWarningMessage(" This Account Not Activated ")
             setTimeout(function () { window.location.replace('./VerifyAccount.html') }, 2000);

@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
             Gander: gander
         }
 
-        let response = await fetch("http://localhost:7000/ElhendawyRestaurant/addNewAcount", {
+        let response = await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/addNewAcount", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -37,17 +37,13 @@ window.addEventListener('load', () => {
         let result = await response.json();
         console.log(result);
         if (result.isExsit == false) {
+            document.getElementById('warning_message').innerHTML = " This Account Already Exist" ;
             document.getElementById('warning_message').style.display = "block";
         } else if (result.isExsit == true) {
             window.location.replace('./VerifyAccount.html')
-            // alert("hi")
         }else if (response.status === 400) {
             document.getElementById('warning_message').innerHTML = result;
             document.getElementById('warning_message').style.display = "block"; 
         }
     }
 })
-
-function Register() {
-    window.location.replace("./register.html");
-}

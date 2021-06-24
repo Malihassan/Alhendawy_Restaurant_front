@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title> Login Form</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Style/index.css">
     <link rel="stylesheet" href="Style/forms.css">
     <script type="module" src="Script/login.js"></script>
+    <script type="module" src="Script/resrvedform.js"></script>
 </head>
+
 <body>
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="nav-logo">
-        logo
-    </div>
-    <ul class="nav-list">
-        <li class="nav-item"> <a href="about.html"> About </a></li>
-        <li class="nav-item"> <a href="contactus.html"> Contact us </a></li>
-        <li class="nav-item "> <a href="register.html"> Register </a></li>
-        <li class="nav-item"> <a href="login.html"> Login </a></li>
-    </ul>
-    <div class="clr"></div>
-</nav>
+    <!-- Navbar -->
+    <div class="container-fluid">
+            <nav class="nav row navbar-light ">
+                <a class="logo col-xl-4 col-lg-4 col-md-3 col-sm-6 col-6 ">
+                    <pre>Elhendawy.</pre>
+                </a>
+                <div class=" col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 row align-items-center justify-content-center "
+                    href="">
+                    <input id="booktable" type="button" value="BOOK TABLE">
+                </div>
+                <ul
+                    class="list list-inline col-xl-5 col-lg-5 col-md-6 col-sm-12 d-flex flex-row align-items-center justify-content-center">
+                    <li class="list_items list-inline-item col-sm-2 "><a href="index.html">HOME</a></li>
+                    <li class="list_items list-inline-item col-sm-2 "><a href="contactus.html">CONTACT</a></li>
+                    <li class="list_items list-inline-item col-sm-2 "><a href="register.html">SIGNUP</a></li>
+                    <li class="list_items list-inline-item col-sm-2 "><a href="login.html">LOGIN</a></li>
+                </ul>
+            </nav>
 
-
-
-    <div class="login">
-    <form id="login-form">
-        <label for="Email">Email </label>
-        <input id="email" type="text" placeholder="Enter Email" value="" />
-        <br>
-        <label for="userpw">Password </label>
-        <input id="password" type="password" placeholder="Enter Password" value=""  required/>
-        <br>
-        <h5 id =warning_login></h5>
-        <br>
-        <div id="logbtns">
-            <input id="login_btn" class="btn" type="submit" value="Login" required/>
-            <input id="Register_btn" class="btn" type="button" value="Register Account"  onClick="Register()" />
+        <div class="login-container row align-items-center justify-content-center">
+            <div class="login col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8 d-flex flex-column row align-items-center justify-content-center">
+                <label class="formtitle row">SIGNIN </label>
+                <form class="d-flex flex-column  align-items-center justify-content-center" id="login-form" >
+                    <input class="inputStyle" id="email" type="email" placeholder="Enter Email" value="" />
+                    <input class="inputStyle" id="password" type="password" placeholder="Enter Password" value="" required />
+                    <label id=warning_login></label>
+                    <input class="btn" id="login_btn" type="submit" value="Login" required /><br>
+                    <a id="ForgotLink" href="forgetPassword.html">Forgot Password </a>
+                </form>
+            </div>
+            
         </div>
-        <br>
-        <input type="checkbox" id="remembercheckbox" name="remember">
-        <label for="remember"> Remember me  </label>
-        <br>
-        <br>
-        <a id="ForgotLink" href="VerifyAccount.html">Forgot Your Password ?</a>
-    </form>
+        <footer class="bg-footer fixed-bottom row  align-items-center justify-content-center">
+            <p class="row align-items-center justify-content-center"> Copyright <span class="span-word"> &copy;
+                </span> Elhendawy Resturant 2021-2022 </p>
+        </footer>
     </div>
+
+    <!-- BOOK TABLE  -->
+    <section class="bookTableSection" id="bookTableModel">
+        <div class="container-bookTable-form row align-items-center justify-content-center">
+            <div class="bookTablePage row col-xl-5 col-lg-7 col-md-7 col-sm-8 col-10">
+                <header class="bookTablePageHeader col-xl-12">
+                    <span  id="closeReservedPage">&times;</span>
+                </header>
+                <div class="bookTableContainer row col-xl-12">
+                    <label class="booktableformtitle row align-items-center justify-content-center col-xl-12">Reservation Table</label>
+                    <form id="book_form" class="bookform row col-xl-12 d-flex justify-content-center ">
+                        
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="name" placeholder="Name" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="email" id="bookemail" placeholder="Email" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="phone-number" placeholder="Phone Number" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="text" id="numPeople" placeholder="Number Of People" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="date" id="date" placeholder="Date" required />
+
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="time" id="time" placeholder="Time" required />
+
+                        <textarea class="booktext col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10" 
+                        id="special-request" placeholder="Specail Request" required ></textarea>
+
+                        <input id="bookTable_btn" type="submit" value="Book">
+                    </form>
+                    <label id="successMessage" class=" row align-items-center justify-content-center col-xl-12"></label>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
