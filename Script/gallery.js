@@ -51,9 +51,9 @@ function addItem(products) {
         var Product_Image = document.createElement('img')
         Product_Image.classList.add('Image_Product')
 
-        var str = products[x].Image;
-        var res = str.replace(/[[\]\\]/g, '/')
-        var res = res.substring(0, 6) + `/` + res.substring(6, res.length);
+        let str = products[x].Image;
+        let res = str.replace(/[[\]\\]/g, '/')
+        let res = res.substring(0, 6) + `/` + res.substring(6, res.length);
 
         Product_Image.src = res        
         var Add_Button = document.createElement("button");
@@ -101,8 +101,15 @@ function ActionGetOrderButton(products) {
             // document.getElementById("OrderPrice").innerText = "";
             // document.getElementById("OrderDesc").innerText = "";
             // document.getElementById("OrderCount").innerText = "";
+
+            let str = img
+            let res = str.replace(/[[\]\\]/g, '/')
+            let res = res.substring(0, 6) + `/` + res.substring(6, res.length);
+    
+
+
             document.getElementById("OrderName").innerText = Name
-            document.getElementById("OrderImage").src = products[x].Image
+            document.getElementById("OrderImage").src = res
             document.getElementById("OrderPrice").innerText = pric + "$";
             document.getElementById("OrderDesc").innerText = Desc;
             document.getElementById("OrderCount").textContent = "1"
