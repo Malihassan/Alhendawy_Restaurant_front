@@ -31,13 +31,14 @@ html {
 
 .list_items  {
     padding: 0px;
+    text-align: center;
+    margin: 0px 9px 0px 9px;
 }
 
 .list_items a {
     color: #f9bd4f;
     font-weight: 600;
     text-decoration: none;
-    margin: 0px 5px 0px 5px;
 }
 
 .list_items a:hover {
@@ -107,23 +108,28 @@ html {
 
 .header-data {
     height: 50%;
-    width: 30rem;
     color: white;
     text-align: center;
     margin: 0px 15px 0px 15px;
     line-height: normal;
+
 }
 
-.header-data h3 {
-    font-size: 150%;
-    padding: 0px;
-    margin: 0px;
+.header-data .welcomeMess {
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 7px;
+    font-size: 90%;
+    line-height: 20px;
 }
 
-.header-data h5 {
-    font-size: 120%;
+.header-data .name {
+    width: 90%;
     padding: 0px;
     margin: 0px;
+    letter-spacing: 15px;
+    font-size: 100%;
+    line-height: 20px;
 }
 
 .about p {
@@ -213,7 +219,7 @@ html {
     height: 100vh;
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.8);
@@ -280,7 +286,7 @@ html {
     font-family: 'Caveat', cursive;
     font-family: 'Sacramento', cursive;
     color: black;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -311,7 +317,7 @@ input[type="time"], input[type="date"] {
     color: #f1f3f4;
     font-family: cursive;
     height: 10%;
-    width: 25%;
+    width: 35%;
 }
 
 #successMessage {

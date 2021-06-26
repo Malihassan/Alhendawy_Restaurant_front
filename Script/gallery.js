@@ -3,6 +3,7 @@ const tokenID = getCookie("RTU");
 var products = getProduct(tokenID);
 window.addEventListener("load", async function () {
     products = await products
+    console.log(products);
     // called method to create product templets
     addItem(products);
 
@@ -41,34 +42,35 @@ async function getProduct(token) {
 
 function addItem(products) {
     for (var x = 0; x < products.length; x++) {
-        /*console.log("Decribe = " + Order[x].Describe + " Image = " + Order[x].Image);*/
         var GalleryDesign = document.createElement("div");
         GalleryDesign.classList.add('Gallery_Design', 'row', 'col-xl-2', 'col-lg-2', 'col-md-3', 'col-sm-4', 'col-8');
-        //  GalleryDesign.style.backgroundImage = "url(Images/" + Order[x].Image + ")";
-        // GalleryDesign.src = "Images/" + Order[x].Image
 
-        GalleryDesign.style.backgroundImage = "url(data:image/png;base64," + products[x].Image + ")";
+        var Product_Container = document.createElement("div");
+        Product_Container.classList.add("Product_Container");
 
-        var GalleryButton = document.createElement("div");
-        GalleryButton.classList.add("Gallery_Button");
+        var Product_Image = document.createElement('img')
+        Product_Image.classList.add('Image_Product')
+        Product_Image.src = products[x].Image
+        
         var Add_Button = document.createElement("button");
         Add_Button.classList.add("viewbutton");
         Add_Button.textContent = "GET ORDER";
         Add_Button.setAttribute("value", "button" + (x));
+
+        Product_Container.appendChild(Product_Image)
+        Product_Container.appendChild(Add_Button)
 
         var OrderDescribe = document.createElement("span");
         OrderDescribe.classList.add("Gallery_Describe");
         OrderDescribe.textContent = products[x].Describe;
 
 
-        GalleryButton.appendChild(Add_Button);
-        GalleryDesign.appendChild(GalleryButton);
+        GalleryDesign.appendChild(Product_Container);
         GalleryDesign.appendChild(OrderDescribe);
 
         var AllView = document.getElementById("ViewAll");
         AllView.appendChild(GalleryDesign);
     }
-    /*console.log(AllView);*/
 }
 
 function ActionGetOrderButton(products) {
@@ -96,7 +98,7 @@ function ActionGetOrderButton(products) {
             // document.getElementById("OrderDesc").innerText = "";
             // document.getElementById("OrderCount").innerText = "";
             document.getElementById("OrderName").innerText = Name
-            document.getElementById("OrderImage").style.backgroundImage = "url(data:image/png;base64," + img + ")";
+            document.getElementById("OrderImage").src = products[x].Image
             document.getElementById("OrderPrice").innerText = pric + "$";
             document.getElementById("OrderDesc").innerText = Desc;
             document.getElementById("OrderCount").textContent = "1"

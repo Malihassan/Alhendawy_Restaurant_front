@@ -66,9 +66,11 @@
         <!--this for create Gallery product-->
         <section id="ViewAll" class="row col-xl-12 align-items-center justify-content-center">
             <!--this Templet will created uesd Java Script so Gallery_Design just structure help me to know the steps that i will do -->
-            <!-- <div class="Gallery_Design row col-xl-2  col-lg-2 col-md-3 col-sm-4 col-9">
-                <div class="Gallery_Button">
-                    <button class="viewbutton" value="button0">GET ORDER</button>
+            <!-- <div class="Gallery_Design  row col-xl-2  col-lg-2 col-md-3 col-sm-4 col-9">
+                <div class="Product_Container">
+                    <img class="Image_Product"
+                        src="https:\res.cloudinary.com\alhendawyrestaurant\image\upload\v1624661462\cuovy490ny0vm0tpfrzu.jpg">
+                        <button class="viewbutton" value="button0">GET ORDER</button>
                 </div>
                 <span class="Gallery_Describe">chicken</span>
             </div> -->
@@ -85,8 +87,8 @@
                     </header>
 
                     <div class=" row col-xl-12 justify-content-center align-items-center" id="container">
-                        <div class="SendOrderPageImage  col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" id="OrderImage">
-                        </div>
+                        <img class="SendOrderPageImage  col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" id="OrderImage">
+
                         <div class="OrderData border col-xl-6 col-lg-6 col-md-6 col-sm-6 col-5 d-flex flex-column">
 
                             <span class="order-name row justify-content-center align-items-center "
@@ -133,37 +135,39 @@
         <div class="container-bookTable-form row align-items-center justify-content-center">
             <div class="bookTablePage row col-xl-5 col-lg-7 col-md-7 col-sm-8 col-10">
                 <header class="bookTablePageHeader col-xl-12">
-                    <span  id="closeReservedPage">&times;</span>
+                    <span id="closeReservedPage">&times;</span>
                 </header>
                 <div class="bookTableContainer row col-xl-12">
-                    <label class="booktableformtitle row align-items-center justify-content-center col-xl-12">Reservation Table</label>
+                    <label
+                        class="booktableformtitle row align-items-center justify-content-center col-xl-12">Reservation
+                        Table</label>
                     <form id="book_form" class="bookform row col-xl-12 d-flex justify-content-center ">
-                        
-                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="text" id="name" placeholder="Name" required />
 
-                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="email" id="bookemail" placeholder="Email" required />
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" type="text" id="name"
+                            placeholder="Name" required />
 
-                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="text" id="phone-number" placeholder="Phone Number" required />
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" type="email" id="bookemail"
+                            placeholder="Email" required />
 
-                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="text" id="numPeople" placeholder="Number Of People" required />
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" type="text" id="phone-number"
+                            placeholder="Phone Number" required />
 
-                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="date" id="date" placeholder="Date" required />
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" type="text" id="numPeople"
+                            placeholder="Number Of People" required />
 
-                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="time" id="time" placeholder="Time" required />
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" type="date" id="date"
+                            placeholder="Date" required />
 
-                        <textarea class="booktext col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10" 
-                        id="special-request" placeholder="Specail Request" required ></textarea>
+                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" type="time" id="time"
+                            placeholder="Time" required />
+
+                        <textarea class="booktext col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10" id="special-request"
+                            placeholder="Specail Request" required></textarea>
 
                         <input id="bookTable_btn" type="submit" value="Book">
                     </form>
                     <label id="successMessage" class=" row align-items-center justify-content-center col-xl-12"></label>
-                    
+
                 </div>
             </div>
         </div>
