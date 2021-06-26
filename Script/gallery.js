@@ -51,11 +51,9 @@ function addItem(products) {
         var Product_Image = document.createElement('img')
         Product_Image.classList.add('Image_Product')
 
-        let str = products[x].Image;
-        let res = str.replace(/[[\]\\]/g, '/')
-        let res = res.substring(0, 6) + `/` + res.substring(6, res.length);
-
-        Product_Image.src = res        
+        let result = rightURLImage(products[x].Image)
+       
+        Product_Image.src = result        
         var Add_Button = document.createElement("button");
         Add_Button.classList.add("viewbutton");
         Add_Button.textContent = "GET ORDER";
@@ -76,6 +74,7 @@ function addItem(products) {
         AllView.appendChild(GalleryDesign);
     }
 }
+
 
 function ActionGetOrderButton(products) {
     var OrderButtonsArray = document.getElementsByClassName("viewbutton");
@@ -102,14 +101,11 @@ function ActionGetOrderButton(products) {
             // document.getElementById("OrderDesc").innerText = "";
             // document.getElementById("OrderCount").innerText = "";
 
-            let str = img
-            let res = str.replace(/[[\]\\]/g, '/')
-            let res = res.substring(0, 6) + `/` + res.substring(6, res.length);
-    
+            let getOrderRes = rightURLImage(img)
 
 
             document.getElementById("OrderName").innerText = Name
-            document.getElementById("OrderImage").src = res
+            document.getElementById("OrderImage").src = getOrderRes
             document.getElementById("OrderPrice").innerText = pric + "$";
             document.getElementById("OrderDesc").innerText = Desc;
             document.getElementById("OrderCount").textContent = "1"
@@ -121,6 +117,13 @@ function ActionGetOrderButton(products) {
 
         });
     }
+}
+
+
+function rightURLImage(str) {
+    let res = str.replace(/[[\]\\]/g, '/')
+    res = res.substring(0, 6) + `/` + res.substring(6, res.length);
+    return res ;
 }
 
 function counter(price) {
