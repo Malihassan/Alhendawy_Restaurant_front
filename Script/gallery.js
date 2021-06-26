@@ -3,7 +3,7 @@ const tokenID = getCookie("RTU");
 var products = getProduct(tokenID);
 window.addEventListener("load", async function () {
     products = await products
-    console.log(products);
+    // console.log(products);
     // called method to create product templets
     addItem(products);
 
@@ -50,8 +50,12 @@ function addItem(products) {
 
         var Product_Image = document.createElement('img')
         Product_Image.classList.add('Image_Product')
-        Product_Image.src = products[x].Image
-        
+
+        var str = products[x].Image;
+        var res = str.replace(/[[\]\\]/g, '/')
+        var res = res.substring(0, 6) + `/` + res.substring(6, res.length);
+
+        Product_Image.src = res        
         var Add_Button = document.createElement("button");
         Add_Button.classList.add("viewbutton");
         Add_Button.textContent = "GET ORDER";
