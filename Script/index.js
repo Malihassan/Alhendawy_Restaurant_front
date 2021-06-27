@@ -64,7 +64,7 @@ async function sendReservation(obj) {
     obj.preventDefault();
 
     let name = document.getElementById("name").value
-    let email = document.getElementById("email").value
+    let email = document.getElementById("bookemail").value
     let phonenNumber = document.getElementById("phone-number").value
     let numPeople = document.getElementById("numPeople").value
     let date = document.getElementById("date").value
@@ -132,7 +132,7 @@ function showReservationForm() {
 }
 function ClosePage() {
     //     console.log("clobutto" + clobutto);
-    var clobutto = document.getElementById("close");
+    var clobutto = document.getElementById("closeReservedPage");
     clobutto.addEventListener("click", function (obj) {
         let model = document.getElementById("bookTableModel");
         model.style.display = "none";

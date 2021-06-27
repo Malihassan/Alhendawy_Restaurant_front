@@ -109,10 +109,11 @@
                         type="email" id="bookemail" placeholder="Email" required />
 
                         <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="text" id="phone-number" placeholder="Phone Number" required />
+                        type="text" id="phone-number" placeholder="Phone Number" pattern="^01[0125][0-9]{8}$"
+                        title="Phone Number Not Valid" required />
 
                         <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="text" id="numPeople" placeholder="Number Of People" required />
+                        type="number" id="numPeople" placeholder="Number Of Visitor"  max="15" min="1" required />
 
                         <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
                         type="date" id="date"  onfocus="(this.type='date')" required />
