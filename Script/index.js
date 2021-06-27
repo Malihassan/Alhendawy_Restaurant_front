@@ -84,7 +84,7 @@ async function sendReservation(obj) {
         SpecialRequest: specialRequest
     }
     // console.log(data);
-    let response =await fetch("http://localhost:7000/ElhendawyRestaurant/bookTable",{
+    let response =await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/bookTable",{
         method :"Post" ,
         headers: {
             'Accept': 'application/json',
