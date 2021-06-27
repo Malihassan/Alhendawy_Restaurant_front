@@ -1,22 +1,22 @@
 const offers = [
     {
-        Name: "unexisted offer",
-        Describe: "order two dishes and get 6 dishes and pay for them all.",
+        Name: "Vegetarian Meal",
+        Describe: "order two dishes and get one for free .",
         Price: 30,
         Image: "GRT-meal-prep-chicken-bean-732x549-thumb.jpg"
     }, {
-        Name: "Noodles",
-        Describe: "order two dishes and get 6 dishes and pay for them all.",
+        Name: "Noodles Dish",
+        Describe: "order three dishes and get one for free.",
         Price: 40,
         Image: "i4.jpeg"
     }, {
-        Name: "Sandwich",
-        Describe: "order two dishes and get 6 dishes and pay for them all.",
+        Name: "Sandwich Chicken",
+        Describe: "order two Sandwich pay only.",
         Price: 50,
         Image: "i3.jpg"
     }, {
-        Name: "Pasta",
-        Describe: "order two dishes and get 6 dishes and pay for them all.",
+        Name: "Potato Dish",
+        Describe: "order two dishes and get one for free.",
         Price: 60,
         Image: "i2.png"
     }
@@ -43,7 +43,7 @@ function addOffer() {
 
         var offerPric = document.createElement('h6')
         offerPric.classList.add('Offer_Price', 'col')
-        offerPric.textContent = offers[index].Price
+        offerPric.textContent = offers[index].Price +" $"
 
         var offerDes = document.createElement('p')
         offerDes.classList.add('Offery_Describe', 'col')
