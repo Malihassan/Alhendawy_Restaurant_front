@@ -133,12 +133,14 @@ html {
 }
 
 .about p {
+    width: 80%;
     margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
     font-size: 1.1rem;
     font-weight: 600;
     color: #616161;
+
 }
 
 .about b {
