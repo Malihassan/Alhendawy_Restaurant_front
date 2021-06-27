@@ -52,8 +52,8 @@ function addItem(products) {
         Product_Image.classList.add('Image_Product')
 
         let result = rightURLImage(products[x].Image)
-       
-        Product_Image.src = result        
+        Product_Image.src = result     
+           
         var Add_Button = document.createElement("button");
         Add_Button.classList.add("viewbutton");
         Add_Button.textContent = "GET ORDER";
