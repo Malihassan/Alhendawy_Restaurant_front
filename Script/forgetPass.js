@@ -40,7 +40,7 @@ async function newPass(obj) {
             Password:password
         }
         console.log(newPassData);
-        let response = await fetch("http://localhost:7000/ElhendawyRestaurant/newPassword", {
+        let response = await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/newPassword", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
