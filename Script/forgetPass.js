@@ -7,7 +7,7 @@ window.addEventListener('load',()=>{
 async function sendMail(obj) {
     obj.preventDefault();
     let email = document.getElementById("email").value
-    let response = await fetch("http://localhost:7000/ElhendawyRestaurant/forgetPassword", {
+    let response = await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/forgetPassword", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -26,7 +26,6 @@ async function sendMail(obj) {
 }
 async function newPass(obj) {
     obj.preventDefault();
-    console.log("herrrrrrrrrr newPass");
     
     let email = document.getElementById("email_newPass_form").value
     let code =document.getElementById("confirmationCode").value
