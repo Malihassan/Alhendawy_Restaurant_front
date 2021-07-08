@@ -20,6 +20,7 @@ var cart = JSON.parse(localStorage.getItem('UserCart'));
 if (cart == null) {
   cart = [] ;
 } 
+
  function AddOrder(name,price) {
   let AddToCartButton = document.getElementById("SendOrderPage_buy");
   AddToCartButton.onclick = () => {
@@ -38,21 +39,22 @@ if (cart == null) {
 
   }
 }
-function pushInCart(Order ,index,CountValue) {
-  if (index == -1) {
-    cart.push(Order) ;
-  } else {
-    const conf =confirm (`you want to update count of ${name} from ${cart[index].Count} to ${CountValue}`  ) ;
-    if (conf == true) {
-      cart[index].Count = CountValue
-    } 
-  }
-  localStorage.setItem("UserCart", JSON.stringify(cart))
 
-  let model = document.getElementById("SendOrdermodel");
-  model.style.display = "none";
-  return cart ;
-}
+// function pushInCart(Order ,index,CountValue) {
+//   if (index == -1) {
+//     cart.push(Order) ;
+//   } else {
+//     const conf =confirm (`you want to update count of ${name} from ${cart[index].Count} to ${CountValue}`  ) ;
+//     if (conf == true) {
+//       cart[index].Count = CountValue
+//     } 
+//   }
+//   localStorage.setItem("UserCart", JSON.stringify(cart))
+
+//   let model = document.getElementById("SendOrdermodel");
+//   model.style.display = "none";
+//   return cart ;
+// }
 
 
 

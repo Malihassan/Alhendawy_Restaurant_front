@@ -1,5 +1,3 @@
-
-
 window.addEventListener('load', () => {
     document.getElementById("booktable").addEventListener('click', showReservationForm)
     document.getElementById("book_form").onsubmit = sendReservation
@@ -10,26 +8,64 @@ window.addEventListener('load', () => {
 async function sendReservation(obj) {
     obj.preventDefault();
 
-    let name = document.getElementById("name").value
-    let email = document.getElementById("bookemail").value
-    let phonenNumber = document.getElementById("phone-number").value
-    let numPeople = document.getElementById("numPeople").value
-    let date = document.getElementById("date").value
-    let time = document.getElementById("time")
-    let specialRequest = document.getElementById("special-request").value
+    let ReservedData = getReservedTextInputs();
+    let validReservedpInputs = validateReservedTextFields(ReservedData)
+    if (validReservedpInputs) {
 
-    //convert time grom 24 to  12 AM /PM
-    time = onTimeChange(time)
+        //convert time grom 24 to  12 AM /PM 
+        let Time = onTimeChange(document.getElementById("time"))
+        ReservedData["Time"] = Time
+
+        sendReservationrequst(ReservedData)
+    }
+}
+
+function getReservedTextInputs() {
+    let Name = document.getElementById("name").value
+    let Email = document.getElementById("bookemail").value
+    let Phone = document.getElementById("phone-number").value
+    let NumberOfPeople = document.getElementById("numPeople").value
+    let Date = document.getElementById("date").value
+    let Time = document.getElementById("time").value
+    let SpecialRequest = document.getElementById("special-request").value
+
 
     let reservationData = {
-        Name: name,
-        Email: email,
-        Date: date,
-        Time: time,
-        Phone: phonenNumber,
-        NumberOfPeople: numPeople,
-        SpecialRequest: specialRequest
+        Name,
+        Email,
+        Date,
+        Time,
+        Phone,
+        NumberOfPeople,
+        SpecialRequest
     }
+    return reservationData
+}
+
+function validateReservedTextFields(data) {
+    let {Name,Email,Date,Time,Phone,NumberOfPeople,SpecialRequest} = data
+    console.log(data);
+    let warning_message = document.getElementById("successMessage") 
+    if (Name.length == 0) {
+        warning_message.innerHTML ='THE NAME IS REQUIRED'
+    } else if(Email.length == 0) {
+        warning_message.innerHTML='THE EMAIL IS REQUIRED'
+    } else if (Date.length == 0) {
+        warning_message.innerHTML ='THE DATE IS REQUIRED'
+    } else if (Time.length == 0) {
+        warning_message.innerHTML='THE TIME IS REQUIRED'
+    } else if (Phone.length == 0) {
+        warning_message.innerHTML='THE PHONE IS REQUIRED'
+    }else if (NumberOfPeople.length == 0) {
+        warning_message.innerHTML='THE NUMBER OF PEOPLE IS REQUIRED'
+    }else if (SpecialRequest.length == 0) {
+        warning_message.innerHTML='THE SPECIAL REQUEST IS REQUIRED'
+    }else{
+        return true
+    } 
+}
+
+async function sendReservationrequst(reservationData) {
     console.log(reservationData);
     let response = await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/bookTable", {
         method: "Post",
@@ -50,13 +86,14 @@ async function sendReservation(obj) {
         let result = await response.json();
         document.getElementById("successMessage").innerText = result
     }
-
 }
+
 function onTimeChange(inputEle) {
     var timeSplit = inputEle.value.split(':'),
         hours,
         minutes,
         meridian;
+        console.log(timeSplit);
     hours = timeSplit[0];
     minutes = timeSplit[1];
     if (hours > 12) {

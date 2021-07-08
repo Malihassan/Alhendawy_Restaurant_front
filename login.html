@@ -51,7 +51,7 @@
             <div class="login col-xl-4 col-lg-4 col-md-6 col-sm-7 col-8 d-flex flex-column  align-items-center justify-content-center">
                 <label class="formtitle row align-items-center justify-content-center">SIGNIN </label>
                 <form class="d-flex flex-column  align-items-center justify-content-center" id="login-form" >
-                    <input class="inputStyle" id="email" type="email" placeholder="Enter Email" value="" />
+                    <input class="inputStyle" id="email" type="email" placeholder="Enter Email" value="" required />
                     <input class="inputStyle" id="password" type="password" placeholder="Enter Password" value="" required />
                     <label id=warning_login></label>
                     <input class="btn" id="login_btn" type="submit" value="Login" required />
@@ -66,8 +66,8 @@
         </footer>
     </div>
 
-    <!-- BOOK TABLE  -->
-    <section class="bookTableSection" id="bookTableModel">
+     <!-- BOOK TABLE  -->
+     <section class="bookTableSection" id="bookTableModel">
         <div class="container-bookTable-form row align-items-center justify-content-center">
             <div class="bookTablePage row col-xl-5 col-lg-7 col-md-7 col-sm-8 col-10">
                 <header class="bookTablePageHeader col-xl-12">
@@ -84,16 +84,17 @@
                         type="email" id="bookemail" placeholder="Email" required />
 
                         <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="text" id="phone-number" placeholder="Phone Number" required />
+                        type="text" id="phone-number" placeholder="Phone Number" pattern="^01[0125][0-9]{8}$"
+                        title="Phone Number Not Valid" required />
 
                         <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="text" id="numPeople" placeholder="Number Of People" required />
+                        type="number" id="numPeople" placeholder="Number Of Visitor"  max="15" min="1" required />
 
-                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="date" id="date" placeholder="Date" required />
+                        <input class="booktext date_time_text col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="date" id="date" placeholder="Date"  onfocus="(this.type='date')" required />
 
-                        <input class="booktext col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
-                        type="time" id="time" placeholder="Time" required />
+                        <input class="booktext date_time_text col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5" 
+                        type="time" id="time" placeholder="time"  required />
 
                         <textarea class="booktext col-xl-11 col-lg-11 col-md-11 col-sm-11 col-10" 
                         id="special-request" placeholder="Specail Request" required ></textarea>

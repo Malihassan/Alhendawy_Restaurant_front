@@ -1,21 +1,48 @@
 window.addEventListener('load' ,()=>{
-    document.getElementById("email_form").onsubmit = sendMail 
+    document.getElementById("email_form").onsubmit = (obj) =>{
+        obj.preventDefault();
+
+        let contactUsData = getcontactUsTextInputs();
+        let validcontactUsInputs = validatecontactUsTextFields(contactUsData)
+        if (validcontactUsInputs) {
+            sendrequst(contactUsData)
+        }
+
+    } 
 })
 
-
-async function sendMail(obj) {
-    obj.preventDefault();
+function getcontactUsTextInputs() {
     userData = document.querySelectorAll(".mailtext");
-    useremail = userData[0].value;
-    usersubject = userData[1].value;
-    usermessage = userData[2].value;
-
-    const contactData = {
-        Email   :useremail,
-        Subject :usersubject,
-        Message :usermessage 
+    Email = userData[0].value;
+    Subject = userData[1].value;
+    Message = userData[2].value;
+    const data = {
+        Email   ,
+        Subject ,
+        Message 
     }
+        return data
+}
 
+function validatecontactUsTextFields(contactUsdata) {
+
+    let warning_contactUs =document.getElementById('successMessage')
+    let {Email,Subject,Message} = contactUsdata
+    if (Email.length == 0) {
+        warning_contactUs.textContent = 'THE EMAIL IS REQUIRED'
+    } else if (Subject.length == 0) {
+        warning_contactUs.textContent = 'THE Subject IS REQUIRED'
+    } else if (Message.length == 0) {
+        warning_contactUs.textContent = 'THE Messge IS REQUIRED'
+    } else {
+        return true
+    }
+}
+
+
+async function sendrequst(contactData) {
+    // http://localhost:7000/
+    // https://alhendawy-restaurant.herokuapp.com/
     let response =await fetch("https://alhendawy-restaurant.herokuapp.com/ElhendawyRestaurant/contactUs",{
         method :"Post" ,
         headers: {
@@ -30,5 +57,4 @@ async function sendMail(obj) {
         var form = document.getElementById("email_form");
         form.reset();        
     }
-
 }
