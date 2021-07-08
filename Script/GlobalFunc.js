@@ -36,25 +36,24 @@ if (cart == null) {
     })
     var x = pushInCart(Order,index,CountValue)
 
-
   }
 }
 
-// function pushInCart(Order ,index,CountValue) {
-//   if (index == -1) {
-//     cart.push(Order) ;
-//   } else {
-//     const conf =confirm (`you want to update count of ${name} from ${cart[index].Count} to ${CountValue}`  ) ;
-//     if (conf == true) {
-//       cart[index].Count = CountValue
-//     } 
-//   }
-//   localStorage.setItem("UserCart", JSON.stringify(cart))
+function pushInCart(Order ,index,CountValue) {
+  if (index == -1) {
+    cart.push(Order) ;
+  } else {
+    const conf =confirm (`you want to update count of ${name} from ${cart[index].Count} to ${CountValue}`  ) ;
+    if (conf == true) {
+      cart[index].Count = CountValue
+    } 
+  }
+  localStorage.setItem("UserCart", JSON.stringify(cart))
 
-//   let model = document.getElementById("SendOrdermodel");
-//   model.style.display = "none";
-//   return cart ;
-// }
+  let model = document.getElementById("SendOrdermodel");
+  model.style.display = "none";
+  return cart ;
+}
 
 
 
